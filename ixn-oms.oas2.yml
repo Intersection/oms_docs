@@ -1,0 +1,3241 @@
+swagger: '2.0'
+info:
+  title: IxN Order Management System
+  version: 1.1.0
+  description: |-
+    Refer to the [OpenDirect specification](https://www.iab.com/wp-content/uploads/2018/01/OpenDirect_v2_Draft_for_Public_Comment_2018-01.pdf) for more details on various fields and operations.
+
+    Test environment: https://oms.qa.linksvc.com
+    Production environment: https://oms.platform.linksvc.com
+  contact:
+    name: Nitin Shriram
+    url: 'http://www.intersection.com'
+    email: nitin.shriram@intersection.com
+paths:
+  /organizations:
+    get:
+      responses:
+        '200':
+          description: ''
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Organization'
+          examples:
+            application/json:
+              - id: '10001'
+                name: advertiser 1
+                address:
+                  city: New York
+                  country: USA
+                  addressline1: U
+                  addressline2: q
+                  postalcode: re
+                  state: NY
+                contacts:
+                  - firstname: Adv1
+                    lastname: C
+                    address:
+                      city: New york
+                      country: culpa esse
+                      addressline1: adipis
+                      addressline2: nulla
+                      postalcode: '10001'
+                      state: NY
+                    email: adv1@adv1.com
+                    honorific: Mr
+                    fax: magna tem
+                    phone: d
+                    title: xx
+                    type: Creative
+                  - firstname: Adv1
+                    lastname: B
+                    address:
+                      city: reprehe
+                      country: elit fugiat adipisicing
+                      addressline1: ''
+                      addressline2: nulla ad
+                      postalcode: volupta
+                      state: deserun
+                    email: nis
+                    honorific: 'ex '
+                    fax: deserunt
+                    phone: e
+                    title: culpa
+                    type: Billing
+                  - firstname: a
+                    lastname: qui
+                    address:
+                      city: 'nostrud '
+                      country: Lorem non elit nulla u
+                      addressline1: ''
+                      addressline2: id
+                      postalcode: culp
+                      state: et off
+                    email: irure
+                    honorific: pariat
+                    fax: dol
+                    phone: Duis
+                    title: v
+                    type: Sales
+                  - firstname: aute ex vo
+                    lastname: enim Ex
+                    address:
+                      city: U
+                      country: dolor voluptate ullamco
+                      addressline1: eu mini
+                      addressline2: 'Excepteur '
+                      postalcode: ullam
+                      state: ea aute
+                    email: pr
+                    honorific: incidid
+                    fax: ut
+                    phone: ex ips
+                    title: ex cul
+                    type: Buyer
+                disapprovalreason: ex culpa
+                fax: ul
+                cat: IAB12-6
+                phone: in oc
+                status: Pending
+                url: nul
+                ext: cillum irure
+              - id: in enim nostrud
+                name: dolore
+                address:
+                  city: ''
+                  country: labore
+                  addressline1: 'occaecat '
+                  addressline2: e
+                  postalcode: dolor a
+                  state: ''
+                contacts:
+                  - firstname: magna
+                    lastname: Lo
+                    address:
+                      city: ''
+                      country: esse veniam
+                      addressline1: ir
+                      addressline2: sed
+                      postalcode: 'ullamco '
+                      state: paria
+                    email: 'mollit '
+                    honorific: adipisic
+                    fax: qui
+                    phone: la
+                    title: amet D
+                    type: Buyer
+                  - firstname: do
+                    lastname: si
+                    address:
+                      city: ''
+                      country: reprehenderit labore ea culpa
+                      addressline1: proiden
+                      addressline2: anim occ
+                      postalcode: labore
+                      state: 'et ad '
+                    email: ex
+                    honorific: dolore
+                    fax: 'amet '
+                    phone: 'ut et '
+                    title: ''
+                    type: Creative
+                  - firstname: 'n'
+                    lastname: Dui
+                    address:
+                      city: m
+                      country: aliquip dolore labore
+                      addressline1: s
+                      addressline2: laboru
+                      postalcode: in moll
+                      state: labor
+                    email: eu u
+                    honorific: o
+                    fax: est ut L
+                    phone: elit in
+                    title: d
+                    type: Sales
+                  - firstname: Duis e
+                    lastname: sint cu
+                    address:
+                      city: e
+                      country: do proident
+                      addressline1: dolor in
+                      addressline2: 'in '
+                      postalcode: fugiat
+                      state: 'labore ut '
+                    email: veniam cu
+                    honorific: aliquip
+                    fax: officia ei
+                    phone: p
+                    title: enim
+                    type: Sales
+                disapprovalreason: non
+                fax: s
+                cat: IAB2
+                phone: anim
+                status: Limited
+                url: rep
+                ext: dolore dolore nulla ipsum
+              - id: sunt est in officia
+                name: 'eu quis '
+                address:
+                  city: et
+                  country: ut nisi tempor pariatur q
+                  addressline1: 'ex '
+                  addressline2: cupidata
+                  postalcode: nostr
+                  state: commodo e
+                contacts:
+                  - firstname: i
+                    lastname: nostrud ve
+                    address:
+                      city: t
+                      country: Lorem proident
+                      addressline1: 'no'
+                      addressline2: volupt
+                      postalcode: Duis
+                      state: ut conseq
+                    email: ''
+                    honorific: fug
+                    fax: Ut id re
+                    phone: ir
+                    title: do
+                    type: Buyer
+                  - firstname: veni
+                    lastname: culpa ma
+                    address:
+                      city: repr
+                      country: id consectetur quis Lorem enim
+                      addressline1: incididu
+                      addressline2: re
+                      postalcode: et
+                      state: 'ea '
+                    email: mollit ad
+                    honorific: do et
+                    fax: ipsum
+                    phone: deseru
+                    title: 'n'
+                    type: Sales
+                  - firstname: s
+                    lastname: conseq
+                    address:
+                      city: 'n'
+                      country: est consectetur
+                      addressline1: adipis
+                      addressline2: anim eu
+                      postalcode: tempo
+                      state: 'aliqua '
+                    email: 'Duis '
+                    honorific: volupta
+                    fax: moll
+                    phone: ut tempo
+                    title: 'n'
+                    type: Billing
+                disapprovalreason: ut ipsum s
+                fax: culpa la
+                cat: IAB12-6
+                phone: consec
+                status: Approved
+                url: 'id '
+                ext: pariatur fugiat officia
+      operationId: findOrganizations
+      summary: List Organizations
+      tags:
+        - Organizations
+      security:
+        - OAuth: []
+      description: This API is for internal use.
+      x-internal: true
+    post:
+      summary: Create Organization
+      operationId: createOrganization
+      parameters:
+        - in: body
+          name: body
+          schema:
+            $ref: '#/definitions/Organization New'
+          x-examples:
+            application/json:
+              address:
+                city: New York
+                country: USA
+                addressline1: 10 Hudson Yards
+                addressline2: ''
+                postalcode: '10001'
+                state: NY
+              contacts:
+                - address:
+                    city: string
+                    country: string
+                    addressline1: string
+                    addressline2: string
+                    postalcode: string
+                    state: string
+                  email: ns@ixn.com
+                  honorific: string
+                  fax: string
+                  firstname: Nitin
+                  lastname: S
+                  phone: string
+                  title: string
+                  type: Billing
+              disapprovalreason: string
+              fax: string
+              cat: IAB1
+              name: XYZ Advertiser
+              phone: string
+              status: Pending
+              url: string
+              ext: string
+      responses:
+        '201':
+          description: ''
+          schema:
+            $ref: '#/definitions/Organization'
+          examples:
+            application/json:
+              address:
+                city: New York
+                country: USA
+                addressline1: 10 Hudson Yards
+                addressline2: ''
+                postalcode: '10001'
+                state: NY
+              contacts:
+                - address:
+                    city: string
+                    country: string
+                    addressline1: string
+                    addressline2: string
+                    postalcode: string
+                    state: string
+                  email: ns@ixn.com
+                  honorific: string
+                  fax: string
+                  firstname: Nitin
+                  lastname: S
+                  phone: string
+                  title: string
+                  type: Billing
+              disapprovalreason: string
+              fax: string
+              cat: IAB1
+              name: XYZ Advertiser
+              id: org-200001
+              phone: string
+              status: Pending
+              url: string
+              ext: string
+      security:
+        - OAuth: []
+      tags:
+        - Organizations
+      description: 'This API is for internal use. '
+      x-internal: true
+  '/organizations/{organizationId}':
+    get:
+      responses:
+        '200':
+          description: ''
+          schema:
+            $ref: '#/definitions/Organization'
+          examples:
+            application/json:
+              address:
+                city: New York
+                country: USA
+                addressline1: 10 Hudson Yards
+                addressline2: ''
+                postalcode: '10001'
+                state: NY
+              contacts:
+                - address:
+                    city: string
+                    country: string
+                    addressline1: string
+                    addressline2: string
+                    postalcode: string
+                    state: string
+                  email: ns@ixn.com
+                  honorific: string
+                  fax: string
+                  firstname: Nitin
+                  lastname: S
+                  phone: string
+                  title: string
+                  type: Billing
+              disapprovalreason: string
+              fax: string
+              cat: IAB1
+              name: XYZ Advertiser
+              id: org-200001
+              phone: string
+              status: Pending
+              url: string
+              ext: string
+      summary: Get Organization
+      tags:
+        - Organizations
+      operationId: getOrganization
+      security:
+        - OAuth: []
+      description: This API is for internal use.
+      x-internal: true
+    parameters:
+      - name: organizationId
+        in: path
+        type: string
+        required: true
+    patch:
+      responses:
+        '200':
+          description: ''
+          schema:
+            $ref: '#/definitions/Organization'
+          examples:
+            application/json:
+              address:
+                city: New York
+                country: USA
+                addressline1: 10 Hudson Yards
+                addressline2: ''
+                postalcode: '10001'
+                state: NY
+              contacts:
+                - address:
+                    city: string
+                    country: string
+                    addressline1: string
+                    addressline2: string
+                    postalcode: string
+                    state: string
+                  email: ns@ixn.com
+                  honorific: string
+                  fax: string
+                  firstname: Nitin
+                  lastname: S
+                  phone: string
+                  title: string
+                  type: Billing
+              disapprovalreason: string
+              fax: string
+              cat: IAB1
+              name: XYZ Advertiser
+              id: org-200001
+              phone: string
+              status: Pending
+              url: string
+              ext: string
+      summary: Update Organization
+      operationId: updateOrganization
+      tags:
+        - Organizations
+      security:
+        - OAuth: []
+      parameters:
+        - in: body
+          name: body
+          schema:
+            $ref: '#/definitions/Organization Update'
+          x-examples:
+            application/json:
+              name: XYZ Advertiser
+              phone: 212-111-1111
+      description: 'This API is for internal use. '
+      x-internal: true
+    delete:
+      responses:
+        '204':
+          description: ''
+          schema:
+            type: object
+            properties: {}
+      summary: Delete Organization
+      operationId: deleteOrganization
+      tags:
+        - Organizations
+      security:
+        - OAuth: []
+      description: 'This API is for internal use. '
+      x-internal: true
+  /accounts:
+    get:
+      responses:
+        '200':
+          description: ''
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Account'
+          examples:
+            application/json:
+              - id: db6aa29c-cf79-4b66-8abd-ef743bddf3f0
+                advertiserid: c314fdc1-2f61-469e-b9e8-08dfc389fc52
+                buyerid: c314fdc1-2f61-469e-b9e8-08dfc389fc52
+                name: Loreal
+                ext: ''
+              - id: 90b9d93b-1048-48c9-a01f-c84354015811
+                advertiserid: c314fdc1-2f61-469e-b9e8-08dfc389fc52
+                buyerid: fb64db2b-336a-489e-b410-b53ab8a67003
+                name: Coca-cola
+                ext: ''
+      operationId: findAccounts
+      summary: List Accounts
+      tags:
+        - Accounts
+      security:
+        - OAuth: []
+        - basicAuth: []
+      description: |
+        An Account represents an advertiser that is a client of of the Agency. Accounts are created and managed by Intersection. Agencies will be able view all the associated accounts.
+    post:
+      summary: Create Account
+      operationId: createAccount
+      parameters:
+        - in: body
+          name: body
+          schema:
+            $ref: '#/definitions/Account New'
+          x-examples:
+            application/json:
+              advertiserid: org-200001
+              buyerid: org-100001
+              name: string
+              ext: ''
+      responses:
+        '201':
+          description: ''
+          schema:
+            $ref: '#/definitions/Account'
+          examples:
+            application/json:
+              id: db6aa29c-cf79-4b66-8abd-ef743bddf3f0
+              advertiserid: c314fdc1-2f61-469e-b9e8-08dfc389fc52
+              buyerid: c314fdc1-2f61-469e-b9e8-08dfc389fc52
+              name: Loreal
+              ext: ''
+      security:
+        - OAuth: []
+      tags:
+        - Accounts
+      description: 'This API is for internal use. Accounts will be created and managed by Intersection. '
+      x-internal: true
+  '/accounts/{accountId}':
+    get:
+      responses:
+        '200':
+          description: ''
+          schema:
+            $ref: '#/definitions/Account'
+          examples:
+            application/json:
+              id: 90b9d93b-1048-48c9-a01f-c84354015811
+              advertiserid: c314fdc1-2f61-469e-b9e8-08dfc389fc52
+              buyerid: fb64db2b-336a-489e-b410-b53ab8a67003
+              name: Loreal
+              ext: ''
+      summary: Get Account
+      tags:
+        - Accounts
+      operationId: getAccount
+      security:
+        - OAuth: []
+      description: ''
+    parameters:
+      - name: accountId
+        in: path
+        type: string
+        required: true
+    patch:
+      responses:
+        '200':
+          description: ''
+          schema:
+            $ref: '#/definitions/Account'
+          examples:
+            application/json:
+              advertiserid: c314fdc1-2f61-469e-b9e8-08dfc389fc52
+              buyerid: fb64db2b-336a-489e-b410-b53ab8a67003
+              name: Loreal
+              ext: ''
+      summary: Update Account
+      operationId: updateAccount
+      tags:
+        - Accounts
+      security:
+        - OAuth: []
+      parameters:
+        - in: body
+          name: body
+          schema:
+            $ref: '#/definitions/Account Update'
+          x-examples:
+            application/json:
+              name: new account name
+      description: 'This API is for internal use. '
+      x-internal: true
+    delete:
+      responses:
+        '204':
+          description: ''
+          schema:
+            type: object
+            properties: {}
+      summary: Delete Account
+      operationId: deleteAccount
+      tags:
+        - Accounts
+      security:
+        - OAuth: []
+      description: 'This API is for internal use. '
+      x-internal: true
+  '/accounts/{accountId}/adunits':
+    get:
+      responses:
+        '200':
+          description: ''
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/AdUnit'
+          examples:
+            application/json:
+              - id: 121c57d6-0846-4cc4-b962-648bad745835
+                name: image
+                spec: string
+                ext:
+                  spec_summary:
+                    widthpixel: 1080
+                    heightpixel: 1920
+                    creativetype: Image
+                    maxfilesizebytes: 2048
+                    mimetype:
+                      - jpg
+                      - png
+                    framespersecond: null
+              - id: c3eb3d30-9af7-4666-baed-1603cac2a428
+                name: video
+                spec: string
+                ext:
+                  spec_summary:
+                    widthpixel: 1080
+                    heightpixel: 1920
+                    creativetype: Video
+                    maxfilesizebytes: 2048
+                    mimetype:
+                      - mp4
+                    framespersecond: 30
+      operationId: findAdUnits
+      security:
+        - OAuth: []
+      summary: List AdUnits
+      tags:
+        - AdUnits
+      description: AdUnits represent the creative specifications of a DisplayFrame or screen.
+    parameters:
+      - name: accountId
+        in: path
+        type: string
+        required: true
+  '/accounts/{accountId}/products':
+    get:
+      responses:
+        '200':
+          description: ''
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Product'
+          examples:
+            application/json:
+              - id: 95eaf13b-2db7-4afa-abb5-fa4dadd4e570
+                adunit:
+                  id: 121c57d6-0846-4cc4-b962-648bad745835
+                  name: LinkNYC
+                  ext:
+                    spec_summary:
+                      widthpixel: 1920
+                      heightpixel: 1080
+                      creativetype: Image
+                      maxfilesizebytes: 2048
+                      mimetype: []
+                      framespersecond: null
+                name: LinkNYC Image
+                description: Two-sided units with 55” displays allow advertisers to reach consumers at-scale throughout New York City.
+                activedate: '2015-03-03T09:41:10Z'
+                allownocreative: null
+                currency: USD
+                baseprice: 24
+                ratetype: CPM
+                deliverytype: null
+                estdailyavails: 10 - 20 million
+                domain: intersection.com/linknyc
+                icon: 'https://intersection.com/linknyc'
+                languages:
+                  - en
+                  - es
+                leadtime: 3
+                minspend: 25000
+                minflight: 1
+                maxflight: 180
+                producttags:
+                  - 1080x1920
+                  - image
+                alladunits: 1
+                retirementaate: '2020-12-31T09:43:30Z'
+                tz: EST
+                url: 'https://intersection.com/linknyc'
+                regs: null
+                device: LinkNYC Outdoor Kiosk
+                geo: NA
+                data: NA
+                source: NA
+                pmp: NA
+                ext:
+                  spots: 6
+                  spot_length: 15
+                  size: 55
+                publisherid: a30c3874-f218-4859-a089-baa0738778f6
+              - id: ed0dbcc1-ce01-4565-bf49-47df5c1ec8fc
+                adunit:
+                  id: c3eb3d30-9af7-4666-baed-1603cac2a428
+                  name: video
+                  ext:
+                    spec_summary:
+                      widthpixel: null
+                      heightpixel: null
+                      creativetype: unspecified
+                      maxfilesizebytes: 2048
+                      mimetype: []
+                      framespersecond: null
+                name: 1080x1920 Video Ads
+                description: 1080x1920 Video (mp4)
+                activedate: '2020-03-01T10:04:45Z'
+                allownocreative: false
+                currency: USD
+                baseprice: 14
+                ratetype: CPM
+                deliverytype: null
+                estdailyavails: 10 - 20 million
+                domain: intersection.com/linknyc
+                icon: 'https://intersection.com/linknyc'
+                languages:
+                  - en
+                  - es
+                leadtime: 3
+                minspend: 25000
+                minflight: 1
+                maxflight: 180
+                producttags:
+                  - 1080x1920
+                  - video
+                alladunits: 1
+                retirementaate: '2020-12-31T10:06:00Z'
+                tz: EST
+                url: 'https://intersection.com/linknyc'
+                regs: null
+                device: LinkNYC Outdoor Kiosk
+                geo: NA
+                data: NA
+                source: NA
+                pmp: NA
+                ext: NA
+                publisherid: a30c3874-f218-4859-a089-baa0738778f6
+      operationId: findProducts
+      security:
+        - OAuth: []
+      summary: List Products
+      tags:
+        - Products
+      description: 'Products represent the various media types that are offered by Intersection. '
+    parameters:
+      - name: accountId
+        in: path
+        type: string
+        required: true
+  /displayframes:
+    get:
+      summary: List DisplayFrames
+      operationId: findDisplayFrames
+      responses:
+        '200':
+          description: ''
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/display-frame'
+          examples:
+            application/json:
+              - address: '655 6th Ave, New York, NY'
+                alt_displayframe_id: MN-456453
+                default_slot_duration: '15'
+                id: 19894431
+                impressions_per_play: 4
+                intercardinal_direction: NW
+                ixn_display_id: MN-04-135464-L
+                latitude: 40.741515
+                longitude: -73.993963
+                name: MN-04-135464-L
+                orientation: Portrait
+                resolution_x: 1080
+                resolution_y: 1920
+                ixn_site_id: MN-04-135464
+                product_ids:
+                  - '40001'
+                  - '40002'
+                height_agl_meters: 0.5
+                measurement:
+                  - startdate: '2019-01-01'
+                    endate: '2019-12-31'
+                    source: Geopath
+                    audience_per_hour: 816
+                    impressions_per_play: 3.4
+              - address: '2nd Avenue, New York, NY'
+                alt_displayframe_id: MN-123123
+                default_slot_duration: '15'
+                id: 12894431
+                impressions_per_play: 3
+                intercardinal_direction: NW
+                ixn_display_id: MN-11-120309-R
+                latitude: 40.801405
+                longitude: -73.934704
+                name: MN-11-120309-R
+                orientation: Portrait
+                resolution_x: 1080
+                resolution_y: 1920
+                ixn_site_id: MN-04-135464
+                product_ids:
+                  - '40001'
+                  - '40002'
+                height_agl_meters: 0.5
+                measurement:
+                  - startdate: '2019-01-01'
+                    endate: '2019-12-31'
+                    source: Geopath
+                    audience_per_hour: 729.6
+                    impressions_per_play: 3.04
+      security:
+        - OAuth: []
+      tags:
+        - DisplayFrames
+  '/accounts/{accountId}/displayframes/{displayFrameId}':
+    parameters:
+      - name: accountId
+        in: path
+        type: string
+        required: true
+      - name: displayFrameId
+        in: path
+        type: string
+        required: true
+    get:
+      summary: Get DisplayFrame
+      operationId: getDisplayFrame
+      responses:
+        '200':
+          description: ''
+          schema:
+            $ref: '#/definitions/display-frame'
+          examples:
+            application/json:
+              id: 20e3d9c4-ffa5-41f6-bc35-9e8d6b5f19f9
+              measurements:
+                - id: e84b4ba9-abb9-4568-908b-f983b43ec003
+                  startdate: '2020-01-01T00:00:00Z'
+                  enddate: '2020-12-31T00:00:00Z'
+                  source: geopath
+                  audience_per_hour: 261.75
+                  impressions_per_play: 1.0906
+                  displayframe: 20e3d9c4-ffa5-41f6-bc35-9e8d6b5f19f9
+              alt_displayframe_id: '622'
+              alt_du_id: 1283617
+              ixn_display_id: BK-01-125268-R
+              ixn_site_id: BK-01-125268
+              name: BK-01-125268-R
+              address: 10 Hudson Yards
+              orientation: Portrait
+              resolution_x: 1920
+              resolution_y: 1080
+              latitude: 40.728134
+              longitude: -73.953438
+              intercardinal_direction: East
+              default_slot_duration: '15'
+              zipcode: '11222'
+              height_agl_meters: 0.5
+              products:
+                - 95eaf13b-2db7-4afa-abb5-fa4dadd4e570
+                - ed0dbcc1-ce01-4565-bf49-47df5c1ec8fc
+      security:
+        - OAuth: []
+      tags:
+        - DisplayFrames
+      description: |
+        DisplayFrame is an Intersection defined entity. It refers to each possible frame or screen on a physical unit. DisplayFrame contains location & size information.
+
+        DisplayFrames can be targeted on a Line (ext_Line)
+  '/accounts/{accountId}/creatives':
+    get:
+      responses:
+        '200':
+          description: ''
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Creative'
+          examples:
+            application/json:
+              - id: f046fbf0-811e-41d2-a587-5ed5374ee099
+                ext:
+                  creativeasset_url: 'https://upload.wikimedia.org/wikipedia/commons/4/47/PNG_transparency_demonstration_1.png'
+                  pub_alt_creative_id: '2497950'
+                  buyer_creative_id: creativeAssets/1778202575886233018
+                name: creativeAssets/1778202575886233018
+                creativeasset: creativeAssets/1778202575886233018
+                creativeapprovals:
+                  - test
+                  - 'Intersection::APPROVED'
+                clickurl: 'http://intersection.com'
+                accountid: 301e5597-08fb-4816-9b62-f1fe6fb09b70
+              - id: a61afdbf-6614-4c39-8a6a-f6e290bdf62e
+                ext:
+                  creativeasset_url: 'https://upload.wikimedia.org/wikipedia/commons/4/47/PNG_transparency_demonstration_1.png'
+                  pub_alt_creative_id: '2492598'
+                  buyer_creative_id: creativeAssets/3899089432557943224
+                name: creativeAssets/3899089432557943224
+                creativeasset: test1
+                creativeapprovals:
+                  - test
+                clickurl: 'http://intersection.com'
+                accountid: 301e5597-08fb-4816-9b62-f1fe6fb09b70
+      operationId: findCreatives
+      security:
+        - OAuth: []
+      summary: List Creatives
+      tags:
+        - Creatives
+      parameters:
+        - in: query
+          name: name
+          type: string
+      description: |
+        A Creative represents the advertiser's adcopy for a Line. Creative are assigned to the Line resource of an order using the Assignment resource.
+    post:
+      summary: Create Creative
+      operationId: createCreative
+      parameters:
+        - in: body
+          name: body
+          schema:
+            $ref: '#/definitions/Creative New'
+          x-examples:
+            application/json:
+              name: creativeAssets/0539106954960586800
+              ext:
+                creativeasset_url: 'https://upload.wikimedia.org/wikipedia/commons/4/47/PNG_transparency_demonstration_1.png'
+                buyer_creative_id: creativeAssets/0539106954960586800
+      responses:
+        '201':
+          description: ''
+          schema:
+            $ref: '#/definitions/Creative'
+          examples:
+            application/json:
+              name: creativeAssets/7921749384905771002
+              clickurl: 'http://intersection.com'
+              creativeapprovals:
+                - 'Intersection::Pending'
+              creativeasset: test1
+              ext:
+                creativeasset_url: 'https://upload.wikimedia.org/wikipedia/commons/4/47/PNG_transparency_demonstration_1.png'
+                buyer_creative_id: creativeAssets/7921749384905771002
+      security:
+        - OAuth: []
+      tags:
+        - Creatives
+      description: |
+        A Creative represents the advertiser's adcopy for a Line. Creative are assigned to the Line resource of an order using the Assignment resource.
+    parameters:
+      - name: accountId
+        in: path
+        type: string
+        required: true
+  '/accounts/{accountId}/creatives/{creativeId}':
+    get:
+      responses:
+        '200':
+          description: ''
+          schema:
+            $ref: '#/definitions/Creative'
+          examples:
+            application/json:
+              id: f046fbf0-811e-41d2-a587-5ed5374ee099
+              ext:
+                creativeasset_url: 'https://upload.wikimedia.org/wikipedia/commons/4/47/PNG_transparency_demonstration_1.png'
+                pub_alt_creative_id: '2497950'
+                buyer_creative_id: creativeAssets/1778202575886233018
+              name: creativeAssets/1778202575886233018
+              creativeasset: creativeAssets/1778202575886233018
+              creativeapprovals:
+                - test
+                - 'Intersection::APPROVED'
+              clickurl: ''
+              accountid: 301e5597-08fb-4816-9b62-f1fe6fb09b70
+      summary: Get Creative
+      tags:
+        - Creatives
+      operationId: getCreative
+      security:
+        - OAuth: []
+      parameters: []
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      description: |
+        A Creative represents the advertiser's adcopy for a Line. Creative are assigned to the Line resource of an order using the Assignment resource.
+    parameters:
+      - in: query
+        name: name
+        type: string
+      - name: accountId
+        in: path
+        type: string
+        required: true
+      - name: creativeId
+        in: path
+        type: string
+        required: true
+    patch:
+      responses:
+        '200':
+          description: ''
+          schema:
+            $ref: '#/definitions/Creative'
+          examples:
+            application/json:
+              name: creativeAssets/7921749384905771002
+              clickurl: 'http://intersection.com'
+              creativeapprovals:
+                - 'Intersection::APPROVED'
+              creativeasset: test1
+              ext:
+                creativeasset_url: 'https://upload.wikimedia.org/wikipedia/commons/4/47/PNG_transparency_demonstration_1.png'
+                buyer_creative_id: creativeAssets/7921749384905771002
+      summary: Update Creative
+      operationId: updateCreative
+      tags:
+        - Creatives
+      security:
+        - OAuth: []
+      parameters:
+        - in: body
+          name: body
+          schema:
+            $ref: '#/definitions/Creative Update'
+          x-examples:
+            application/json:
+              name: test image 1
+      description: |
+        A Creative represents the advertiser's adcopy for a Line. Creative are assigned to the Line resource of an order using the Assignment resource.
+  '/accounts/{accountId}/orders':
+    get:
+      responses:
+        '200':
+          description: ''
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Order'
+          examples:
+            application/json:
+              - id: c793426b-4d18-48cc-80a6-c6e646e432b4
+                accountid: 301e5597-08fb-4816-9b62-f1fe6fb09b70
+                contacts:
+                  - id: f4ff1e26-1b4f-4a83-b12d-806b63cb42a3
+                    address:
+                      id: f6ef66cf-55d1-4307-9b34-89d4da45b815
+                      addressline1: 10 Hudson Yards
+                      addressline2: 26th Floor
+                      city: NY
+                      country: USA
+                      postalcode: '10001'
+                      state: NY
+                    email: oms.app@intersection.com
+                    honorific: ''
+                    fax: ''
+                    firstname: oms
+                    lastname: intersection
+                    phone: ''
+                    title: ''
+                    type: ''
+                name: 'Order-2020-03-27T04:03:40.904Z:orders/9009370599094161925'
+                brand: ''
+                currency: USD
+                budget: 0
+                orderstatus: Pending
+                packageonly: true
+                preferredbillingmethod: Electronic
+                startdate: '2020-3-27'
+                enddate: '2020-4-2'
+                orderexpirydate: ''
+                created_at: '2020-03-27T04:07:02.511377Z'
+                updated_at: '2020-03-27T10:07:29.331616Z'
+                publisherid: a30c3874-f218-4859-a089-baa0738778f6
+                ext:
+                  buyer_order_id: orders/9009370599094161925
+                  pub_alt_order_id: '2926'
+              - id: dc8ce99e-68c4-471e-a285-50263b431b07
+                accountid: 301e5597-08fb-4816-9b62-f1fe6fb09b70
+                contacts:
+                  - id: f4ff1e26-1b4f-4a83-b12d-806b63cb42a3
+                    address:
+                      id: f6ef66cf-55d1-4307-9b34-89d4da45b815
+                      addressline1: 10 Hudson Yards
+                      addressline2: 26th Floor
+                      city: NY
+                      country: USA
+                      postalcode: '10001'
+                      state: NY
+                    email: oms.app@intersection.com
+                    honorific: ''
+                    fax: ''
+                    firstname: oms
+                    lastname: intersection
+                    phone: ''
+                    title: ''
+                    type: ''
+                name: 'Order-2020-03-26T13:43:06.562Z:orders/4826821434804483605'
+                brand: test-brand
+                currency: USD
+                budget: 0
+                orderstatus: Approved
+                packageonly: true
+                preferredbillingmethod: Electronic
+                startdate: '2020-3-26'
+                enddate: '2020-3-30'
+                orderexpirydate: ''
+                created_at: '2020-03-26T13:43:33.395769Z'
+                updated_at: '2020-03-26T14:25:20.746680Z'
+                publisherid: a30c3874-f218-4859-a089-baa0738778f6
+                ext:
+                  buyer_order_id: orders/4826821434804483605
+                  pub_alt_order_id: '2919'
+      operationId: findOrders
+      security:
+        - OAuth: []
+      summary: List Orders
+      tags:
+        - Orders
+      parameters:
+        - in: body
+          name: body
+          schema: {}
+    post:
+      summary: Create Order
+      operationId: createOrder
+      parameters:
+        - in: body
+          name: body
+          schema:
+            $ref: '#/definitions/Order New'
+          x-examples:
+            application/json:
+              accountid: 301e5597-08fb-4816-9b62-f1fe6fb09b70
+              contacts:
+                - id: f4ff1e26-1b4f-4a83-b12d-806b63cb42a3
+              name: 'Order-2020-03-27T04:03:40.904Z:orders/9009370599094161925'
+              brand: Intersection
+              currency: USD
+              budget: 0
+              orderstatus: Pending
+              packageonly: true
+              preferredbillingmethod: Electronic
+              startdate: '2020-3-27'
+              enddate: '2020-4-2'
+              publisherid: a30c3874-f218-4859-a089-baa0738778f6
+              ext:
+                buyer_order_id: orders/9009370599094161925
+      responses:
+        '201':
+          description: ''
+          schema:
+            $ref: '#/definitions/Order'
+          examples:
+            application/json:
+              id: c793426b-4d18-48cc-80a6-c6e646e432b4
+              accountid: 301e5597-08fb-4816-9b62-f1fe6fb09b70
+              contacts:
+                - id: f4ff1e26-1b4f-4a83-b12d-806b63cb42a3
+              name: 'Order-2020-03-27T04:03:40.904Z:orders/9009370599094161925'
+              brand: Intersection
+              currency: USD
+              budget: 0
+              orderstatus: Pending
+              packageonly: true
+              preferredbillingmethod: Electronic
+              startdate: '2020-3-27'
+              enddate: '2020-4-2'
+              publisherid: a30c3874-f218-4859-a089-baa0738778f6
+              ext:
+                buyer_order_id: orders/9009370599094161925
+                pub_alt_order_id: '2926'
+      security:
+        - OAuth: []
+      tags:
+        - Orders
+    parameters:
+      - name: accountId
+        in: path
+        type: string
+        required: true
+  '/accounts/{accountId}/orders/{orderId}':
+    get:
+      responses:
+        '200':
+          description: ''
+          schema:
+            $ref: '#/definitions/Order'
+          examples:
+            application/json:
+              id: c793426b-4d18-48cc-80a6-c6e646e432b4
+              accountid: 301e5597-08fb-4816-9b62-f1fe6fb09b70
+              contacts:
+                - id: f4ff1e26-1b4f-4a83-b12d-806b63cb42a3
+                  address:
+                    id: f6ef66cf-55d1-4307-9b34-89d4da45b815
+                    addressline1: 10 Hudson Yards
+                    addressline2: 26th Floor
+                    city: NY
+                    country: USA
+                    postalcode: '10001'
+                    state: NY
+                  email: oms.app@intersection.com
+                  honorific: ''
+                  fax: ''
+                  firstname: oms
+                  lastname: intersection
+                  phone: ''
+                  title: ''
+                  type: ''
+              name: 'Order-2020-03-27T04:03:40.904Z:orders/9009370599094161925'
+              brand: ''
+              currency: USD
+              budget: 0
+              orderstatus: Pending
+              packageonly: true
+              preferredbillingmethod: Electronic
+              startdate: '2020-3-27'
+              enddate: '2020-4-2'
+              orderexpirydate: ''
+              created_at: '2020-03-27T04:07:02.511377Z'
+              updated_at: '2020-03-27T10:07:29.331616Z'
+              publisherid: a30c3874-f218-4859-a089-baa0738778f6
+              ext:
+                buyer_order_id: orders/9009370599094161925
+                pub_alt_order_id: '2926'
+      summary: Get Order
+      tags:
+        - Orders
+      operationId: getOrder
+      security:
+        - OAuth: []
+    parameters:
+      - name: accountId
+        in: path
+        type: string
+        required: true
+      - name: orderId
+        in: path
+        type: string
+        required: true
+    patch:
+      responses:
+        '200':
+          description: ''
+          schema:
+            $ref: '#/definitions/Order'
+          examples:
+            application/json:
+              id: c793426b-4d18-48cc-80a6-c6e646e432b4
+              accountid: 301e5597-08fb-4816-9b62-f1fe6fb09b70
+              contacts:
+                - id: f4ff1e26-1b4f-4a83-b12d-806b63cb42a3
+              name: 'Order-2020-03-27T04:03:40.904Z:orders/9009370599094161925'
+              brand: ''
+              currency: USD
+              budget: 0
+              orderstatus: Pending
+              packageonly: true
+              preferredbillingmethod: Electronic
+              startdate: '2020-3-27'
+              enddate: '2020-4-2'
+              orderexpirydate: ''
+              publisherid: a30c3874-f218-4859-a089-baa0738778f6
+              ext:
+                buyer_order_id: orders/9009370599094161925
+                pub_alt_order_id: '2926'
+      summary: Update Order
+      operationId: updateOrder
+      tags:
+        - Orders
+      security:
+        - OAuth: []
+      parameters:
+        - in: body
+          name: body
+          schema:
+            $ref: '#/definitions/Order Update'
+          x-examples:
+            application/json:
+              Budget: 40000.45
+              enddate: '2018-11-30'
+              name: November 2018 Display Ads
+              startdate: '2018-11-01'
+  '/accounts/{accountId}/orders/{orderId}/lines':
+    get:
+      responses:
+        '200':
+          description: ''
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Line'
+          examples:
+            application/json:
+              - id: 34635a66-aec0-47b2-a5bd-0adb9f8e5c1e
+                orderid: c862c687-6f40-45fc-9811-dfac0d1dd384
+                productid: 95eaf13b-2db7-4afa-abb5-fa4dadd4e570
+                ext:
+                  daypart_starttime: '06:25:08'
+                  daypart_endtime: '11:25:08'
+                  displayframes:
+                    - 569ebca9-d2cc-4839-8afe-87b0868e20be
+                    - 734bd205-cfec-4daf-a9ad-1ba00f1a7fce
+                  dow_mask: 127
+                  orientations:
+                    - Portrait
+                  slot_duration: 15
+                  zipcodes: null
+                  pub_alt_line_id: '2474'
+                  pub_alt_order_id: '3041'
+                  buyer_line_id: orders/6762375441085750207/lines/9577846654060469471
+                name: 'LINE-2020-04-07T09:19:22.178Z'
+                bookingstatus: PendingReservation
+                statechangereason: ''
+                startdate: '2020-04-07'
+                enddate: '2020-04-11'
+                ratetype: CPM
+                rate: 5
+                quantity: 1200
+                cost: 6
+                comment: ''
+                reservedexpirydate: '2020-05-20'
+                targeting: ''
+                pmp: ''
+                created_at: '2020-04-07T09:19:51.065580Z'
+                updated_at: '2020-04-07T09:19:51.517989Z'
+              - id: 801f6152-0b05-4b35-be82-b6492a0fb30d
+                orderid: c862c687-6f40-45fc-9811-dfac0d1dd384
+                productid: 95eaf13b-2db7-4afa-abb5-fa4dadd4e570
+                ext:
+                  daypart_starttime: '06:25:08'
+                  daypart_endtime: '11:25:08'
+                  displayframes:
+                    - 569ebca9-d2cc-4839-8afe-87b0868e20be
+                    - 734bd205-cfec-4daf-a9ad-1ba00f1a7fce
+                  dow_mask: 127
+                  orientations:
+                    - Portrait
+                  slot_duration: 15
+                  zipcodes: null
+                  pub_alt_line_id: '2473'
+                  pub_alt_order_id: '3040'
+                  buyer_line_id: orders/6762375441085750207/lines/3386198371938031327
+                name: 'LINE-2020-04-07T09:19:34.170Z'
+                bookingstatus: Booked
+                statechangereason: ''
+                startdate: '2020-04-07'
+                enddate: '2020-04-11'
+                ratetype: CPM
+                rate: 5
+                quantity: 1200
+                cost: 6
+                comment: ''
+                reservedexpirydate: '2020-05-20'
+                targeting: ''
+                pmp: ''
+                created_at: '2020-04-07T09:19:49.789565Z'
+                updated_at: '2020-04-07T09:25:30.536352Z'
+      operationId: findLines
+      security:
+        - OAuth: []
+      summary: List Lines
+      tags:
+        - Lines
+    post:
+      summary: Create Line
+      operationId: createLine
+      parameters:
+        - in: body
+          name: body
+          schema:
+            $ref: '#/definitions/Line New'
+          x-examples:
+            application/json:
+              productid: 95eaf13b-2db7-4afa-abb5-fa4dadd4e570
+              ext:
+                daypart_starttime: '06:25:08'
+                daypart_endtime: '11:25:08'
+                displayframes:
+                  - 569ebca9-d2cc-4839-8afe-87b0868e20be
+                  - 734bd205-cfec-4daf-a9ad-1ba00f1a7fce
+                dow_mask: 127
+                orientations:
+                  - Portrait
+                slot_duration: 15
+                zipcodes:
+                  - 10001
+                buyer_line_id: orders/6762375441085750207/lines/9577846654060469471
+              name: 'LINE-2020-04-07T09:19:22.178Z'
+              bookingstatus: PendingReservation
+              statechangereason: ''
+              startdate: '2020-04-07'
+              enddate: '2020-04-11'
+              ratetype: CPM
+              rate: 5
+              quantity: 1200
+              cost: 6
+              comment: ''
+              reservedexpirydate: '2020-05-20'
+              targeting: ''
+              pmp: ''
+      responses:
+        '201':
+          description: ''
+          schema:
+            $ref: '#/definitions/Line'
+          examples:
+            application/json:
+              id: 34635a66-aec0-47b2-a5bd-0adb9f8e5c1e
+              orderid: c862c687-6f40-45fc-9811-dfac0d1dd384
+              productid: 95eaf13b-2db7-4afa-abb5-fa4dadd4e570
+              ext:
+                daypart_starttime: '06:25:08'
+                daypart_endtime: '11:25:08'
+                displayframes:
+                  - 569ebca9-d2cc-4839-8afe-87b0868e20be
+                  - 734bd205-cfec-4daf-a9ad-1ba00f1a7fce
+                dow_mask: 127
+                orientations:
+                  - Portrait
+                slot_duration: 15
+                zipcodes:
+                  - 10001
+                pub_alt_line_id: '2474'
+                pub_alt_order_id: '3041'
+                buyer_line_id: orders/6762375441085750207/lines/9577846654060469471
+              name: 'LINE-2020-04-07T09:19:22.178Z'
+              bookingstatus: PendingReservation
+              statechangereason: ''
+              startdate: '2020-04-07'
+              enddate: '2020-04-11'
+              ratetype: CPM
+              rate: 5
+              quantity: 1200
+              cost: 6
+              comment: ''
+              reservedexpirydate: '2020-05-20'
+              targeting: ''
+              pmp: ''
+              created_at: '2020-04-07T09:19:51.065580Z'
+      security:
+        - OAuth: []
+      tags:
+        - Lines
+    parameters:
+      - name: accountId
+        in: path
+        type: string
+        required: true
+      - name: orderId
+        in: path
+        type: string
+        required: true
+  '/accounts/{accountId}/orders/{orderId}/lines/{lineId}':
+    get:
+      responses:
+        '200':
+          description: ''
+          schema:
+            $ref: '#/definitions/Line'
+          examples:
+            application/json:
+              id: 34635a66-aec0-47b2-a5bd-0adb9f8e5c1e
+              orderid: c862c687-6f40-45fc-9811-dfac0d1dd384
+              productid: 95eaf13b-2db7-4afa-abb5-fa4dadd4e570
+              ext:
+                daypart_starttime: '06:25:08'
+                daypart_endtime: '11:25:08'
+                displayframes:
+                  - 569ebca9-d2cc-4839-8afe-87b0868e20be
+                  - 734bd205-cfec-4daf-a9ad-1ba00f1a7fce
+                dow_mask: 127
+                orientations:
+                  - Portrait
+                slot_duration: 15
+                zipcodes:
+                  - 10001
+                pub_alt_line_id: '2474'
+                pub_alt_order_id: '3041'
+                buyer_line_id: orders/6762375441085750207/lines/9577846654060469471
+              name: 'LINE-2020-04-07T09:19:22.178Z'
+              bookingstatus: PendingReservation
+              statechangereason: ''
+              startdate: '2020-04-07'
+              enddate: '2020-04-11'
+              ratetype: CPM
+              rate: 5
+              quantity: 1200
+              cost: 6
+              comment: ''
+              reservedexpirydate: '2020-05-20'
+              targeting: ''
+              pmp: ''
+              created_at: '2020-04-07T09:19:51.065580Z'
+              updated_at: '2020-04-07T09:19:51.517989Z'
+      summary: Get Line
+      tags:
+        - Lines
+      operationId: getLine
+      security:
+        - OAuth: []
+    parameters:
+      - name: accountId
+        in: path
+        type: string
+        required: true
+      - name: orderId
+        in: path
+        type: string
+        required: true
+      - name: lineId
+        in: path
+        type: string
+        required: true
+    patch:
+      responses:
+        '200':
+          description: ''
+          schema:
+            $ref: '#/definitions/Line'
+          examples:
+            application/json:
+              id: 34635a66-aec0-47b2-a5bd-0adb9f8e5c1e
+              orderid: c862c687-6f40-45fc-9811-dfac0d1dd384
+              productid: 95eaf13b-2db7-4afa-abb5-fa4dadd4e570
+              ext:
+                daypart_starttime: '06:25:08'
+                daypart_endtime: '11:25:08'
+                displayframes:
+                  - 569ebca9-d2cc-4839-8afe-87b0868e20be
+                  - 734bd205-cfec-4daf-a9ad-1ba00f1a7fce
+                dow_mask: 127
+                orientations:
+                  - Portrait
+                slot_duration: 15
+                zipcodes:
+                  - 10001
+                pub_alt_line_id: '2474'
+                pub_alt_order_id: '3041'
+                buyer_line_id: orders/6762375441085750207/lines/9577846654060469471
+              name: 'LINE-2020-04-07T09:19:22.178Z'
+              bookingstatus: Reserved
+              statechangereason: ''
+              startdate: '2020-04-07'
+              enddate: '2020-04-11'
+              ratetype: CPM
+              rate: 5
+              quantity: 1200
+              cost: 6
+              comment: ''
+              reservedexpirydate: '2020-05-20'
+              targeting: ''
+              pmp: ''
+              created_at: '2020-04-07T09:19:51.065580Z'
+              updated_at: '2020-04-07T09:20:51.517989Z'
+      summary: Update Line
+      operationId: updateLine
+      tags:
+        - Lines
+      security:
+        - OAuth: []
+      parameters:
+        - in: body
+          name: body
+          schema:
+            $ref: '#/definitions/Line Update'
+          x-examples:
+            application/json:
+              productid: 95eaf13b-2db7-4afa-abb5-fa4dadd4e570
+              ext:
+                daypart_starttime: '06:25:08'
+                daypart_endtime: '11:25:08'
+                displayframes:
+                  - 569ebca9-d2cc-4839-8afe-87b0868e20be
+                  - 734bd205-cfec-4daf-a9ad-1ba00f1a7fce
+                dow_mask: 127
+                orientations:
+                  - Portrait
+                slot_duration: 15
+                zipcodes:
+                  - 10001
+                pub_alt_line_id: '2474'
+                pub_alt_order_id: '3041'
+                buyer_line_id: orders/6762375441085750207/lines/9577846654060469471
+              name: 'LINE-2020-04-07T09:19:22.178Z'
+              bookingstatus: Reserved
+              statechangereason: ''
+              startdate: '2020-04-07'
+              enddate: '2020-04-11'
+              ratetype: CPM
+              rate: 5
+              quantity: 1200
+              cost: 6
+              comment: ''
+              reservedexpirydate: '2020-05-20'
+              targeting: ''
+              pmp: ''
+      description: 'This API is for internal use. '
+  '/accounts/{accountId}/orders/{orderId}/lines/{lineId}/placements':
+    get:
+      responses:
+        '200':
+          description: ''
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Placement'
+          examples:
+            application/json:
+              - id: 4d618066-17da-4c0f-971d-522b4caf65ec
+                adunit: 2d3eb5f2-d273-4753-8402-4bbe5893c176
+                spec: test-spec-123
+                line: e1302bd5-9f60-4d86-ae36-4fb5452a689d
+                ext:
+                  pub_alt_placement_id: null
+                  buyer_placement_id: null
+      operationId: findPlacements
+      security:
+        - OAuth: []
+      summary: List Placements
+      tags:
+        - Placements
+    post:
+      summary: Create Placement
+      operationId: createPlacement
+      parameters:
+        - in: body
+          name: body
+          schema:
+            $ref: '#/definitions/Placement New'
+          x-examples:
+            application/json:
+              adunit: 121c57d6-0846-4cc4-b962-648bad745835
+              spec: Display 1080x1920 LinkNYC
+              ext:
+                pub_alt_placement_id: ''
+                buyer_placement_id: ''
+      responses:
+        '201':
+          description: ''
+          schema:
+            $ref: '#/definitions/Placement New'
+          examples:
+            application/json:
+              id: 4d618066-17da-4c0f-971d-522b4caf65ec
+              adunit: 2d3eb5f2-d273-4753-8402-4bbe5893c176
+              spec: test-spec-123
+              line: e1302bd5-9f60-4d86-ae36-4fb5452a689d
+              ext:
+                pub_alt_placement_id: null
+                buyer_placement_id: null
+      security:
+        - OAuth: []
+      tags:
+        - Placements
+    parameters:
+      - name: accountId
+        in: path
+        type: string
+        required: true
+      - name: orderId
+        in: path
+        type: string
+        required: true
+      - name: lineId
+        in: path
+        type: string
+        required: true
+  '/accounts/{accountId}/orders/{orderId}/lines/{lineId}/placements/{placementId}':
+    get:
+      responses:
+        '200':
+          description: ''
+          schema:
+            $ref: '#/definitions/Placement'
+          examples:
+            application/json:
+              id: 4d618066-17da-4c0f-971d-522b4caf65ec
+              adunit: 2d3eb5f2-d273-4753-8402-4bbe5893c176
+              spec: test-spec-123
+              line: e1302bd5-9f60-4d86-ae36-4fb5452a689d
+              ext:
+                pub_alt_placement_id: null
+                buyer_placement_id: null
+      summary: Get Placement
+      tags:
+        - Placements
+      operationId: getPlacement
+      security:
+        - OAuth: []
+      parameters: []
+    parameters:
+      - name: accountId
+        in: path
+        type: string
+        required: true
+      - name: orderId
+        in: path
+        type: string
+        required: true
+      - name: lineId
+        in: path
+        type: string
+        required: true
+      - name: placementId
+        in: path
+        type: string
+        required: true
+    patch:
+      responses:
+        '200':
+          description: ''
+          schema:
+            $ref: '#/definitions/Placement'
+          examples:
+            application/json:
+              adunit: 121c57d6-0846-4cc4-b962-648bad745835
+              spec: Display 1080x1920 LinkNYC
+              ext:
+                pub_alt_placement_id: ''
+                buyer_placement_id: ''
+      summary: Update Placement
+      operationId: updatePlacement
+      tags:
+        - Placements
+      security:
+        - OAuth: []
+      parameters:
+        - in: body
+          name: body
+          schema:
+            $ref: '#/definitions/Placement Update'
+          x-examples:
+            application/json:
+              adunit: 121c57d6-0846-4cc4-b962-648bad745835
+              spec: Display 1080x1920 LinkNYC
+              ext:
+                pub_alt_placement_id: ''
+                buyer_placement_id: ''
+  '/accounts/{accountId}/orders/{orderId}/lines/{lineId}/placements/{placementId}/assignments':
+    get:
+      responses:
+        '200':
+          description: ''
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Assignment'
+          examples:
+            application/json:
+              - id: 84557578-9414-4d0c-a2f3-ecec62f634e1
+                creative: f046fbf0-811e-41d2-a587-5ed5374ee099
+                placementid: 4d618066-17da-4c0f-971d-522b4caf65ec
+                weight: 1
+                status: PendingApproval
+                ext:
+                  pub_alt_assignment_id: '24563456'
+              - id: 74b131d6-49d6-427f-b97e-9374b6502189
+                creative: f046fbf0-811e-41d2-a587-5ed5374ee099
+                placementid: 6eff5881-f935-497f-adb2-a4c8933cbc96
+                weight: 2
+                status: PendingApproval
+                ext:
+                  pub_alt_assignment_id: '24563457'
+      operationId: findAssignments
+      security:
+        - OAuth: []
+      summary: List Assignments
+      tags:
+        - Assignments
+    post:
+      summary: Create Assignment
+      operationId: createAssignment
+      parameters:
+        - in: body
+          name: body
+          schema:
+            $ref: '#/definitions/Assignment New'
+          x-examples:
+            application/json:
+              creative: f046fbf0-811e-41d2-a587-5ed5374ee099
+              status: PendingApproval
+              weight: 1
+              ext:
+                pub_alt_assignment_id: '24563456'
+      responses:
+        '201':
+          description: ''
+          schema:
+            $ref: '#/definitions/Assignment New'
+          examples:
+            application/json:
+              id: 84557578-9414-4d0c-a2f3-ecec62f634e1
+              creative: f046fbf0-811e-41d2-a587-5ed5374ee099
+              placementid: 4d618066-17da-4c0f-971d-522b4caf65ec
+              weight: 1
+              status: PendingApproval
+              ext:
+                pub_alt_assignment_id: '24563456'
+      security:
+        - OAuth: []
+      tags:
+        - Assignments
+    parameters:
+      - name: accountId
+        in: path
+        type: string
+        required: true
+      - name: orderId
+        in: path
+        type: string
+        required: true
+      - name: lineId
+        in: path
+        type: string
+        required: true
+      - name: placementId
+        in: path
+        type: string
+        required: true
+  '/accounts/{accountId}/orders/{orderId}/lines/{lineId}/placements/{placementId}/assignments/{assignmentId}':
+    get:
+      responses:
+        '200':
+          description: ''
+          schema:
+            $ref: '#/definitions/Assignment'
+          examples:
+            application/json:
+              id: 74b131d6-49d6-427f-b97e-9374b6502189
+              creative: f046fbf0-811e-41d2-a587-5ed5374ee099
+              placementid: 6eff5881-f935-497f-adb2-a4c8933cbc96
+              weight: 2
+              status: PendingApproval
+              ext:
+                pub_alt_assignment_id: '24563457'
+      summary: Get Assignment
+      tags:
+        - Assignments
+      operationId: getAssignment
+      security:
+        - OAuth: []
+    parameters:
+      - name: accountId
+        in: path
+        type: string
+        required: true
+      - name: orderId
+        in: path
+        type: string
+        required: true
+      - name: lineId
+        in: path
+        type: string
+        required: true
+      - name: placementId
+        in: path
+        type: string
+        required: true
+      - name: assignmentId
+        in: path
+        type: string
+        required: true
+    patch:
+      responses:
+        '200':
+          description: ''
+          schema:
+            $ref: '#/definitions/Assignment'
+          examples:
+            application/json:
+              id: 74b131d6-49d6-427f-b97e-9374b6502189
+              creative: f046fbf0-811e-41d2-a587-5ed5374ee099
+              placementid: 6eff5881-f935-497f-adb2-a4c8933cbc96
+              weight: 2
+              status: Active
+              ext:
+                pub_alt_assignment_id: '24563457'
+      summary: Update Assignment
+      operationId: updateAssignment
+      tags:
+        - Assignments
+      security:
+        - OAuth: []
+      parameters:
+        - in: body
+          name: body
+          schema:
+            $ref: '#/definitions/Assignment Update'
+          x-examples:
+            application/json:
+              creative: f046fbf0-811e-41d2-a587-5ed5374ee099
+              placementid: 6eff5881-f935-497f-adb2-a4c8933cbc96
+              weight: 2
+              status: Active
+              ext:
+                pub_alt_assignment_id: '24563457'
+  '/accounts/{account_id}/availability':
+    post:
+      responses:
+        '200':
+          description: ''
+          schema:
+            type: object
+            properties:
+              bookable:
+                type: boolean
+              blocked_by_takeover:
+                type: boolean
+              availability:
+                type: object
+                properties:
+                  available:
+                    type: object
+                    properties:
+                      count:
+                        type: integer
+                      displayframe_ids:
+                        type: array
+                        items:
+                          type: string
+                  unavailable:
+                    type: object
+                    properties:
+                      count:
+                        type: integer
+                      displayframe_ids:
+                        type: array
+                        items:
+                          type: string
+                  partial:
+                    type: object
+                    properties:
+                      count:
+                        type: integer
+                      displayframe_ids:
+                        type: array
+                        items:
+                          type: string
+              adplan:
+                $ref: '#/definitions/ext_AdPlan'
+          examples:
+            application/json:
+              bookable: false
+              blocked_by_takeover: true
+              availability:
+                available:
+                  count: 5
+                  displayframe_ids:
+                    - mollit veniam Lorem est dolor
+                    - occaecat cillum consectetur
+                    - ea
+                    - ea consectetur laboris velit
+                unavailable:
+                  count: 4
+                  displayframe_ids:
+                    - tempor
+                    - ipsum dolore in elit deserunt
+                    - proident
+                partial:
+                  count: 3
+                  displayframe_ids:
+                    - amet eu tempor occaecat dolore
+                    - dolor mollit pariatur aute cupidatat
+                    - exercitation eu
+              adplan:
+                - displayframe_id: BX-01-123228-L
+                  date: '2018-01-14'
+                  hour: 0
+                  plays: 100
+                  impressions: 240
+                - displayframe_id: BX-01-123228-L
+                  date: '2018-01-15'
+                  hour: 1
+                  plays: 200
+                  impressions: 480
+                - displayframe_id: BX-01-123228-L
+                  date: '2018-01-16'
+                  hour: 23
+                  plays: 400
+                  impressions: 960
+                - displayframe_id: MN-08-134750-R
+                  date: '2018-01-14'
+                  hour: 10
+                  plays: 100
+                  impressions: 300
+                - displayframe_id: MN-08-134750-R
+                  date: '2018-01-15'
+                  hour: 16
+                  plays: 200
+                  impressions: 600
+      summary: Inventory Availability
+      security:
+        - OAuth: []
+      operationId: lookupAvails
+      tags:
+        - Inventory Availability
+      parameters:
+        - in: body
+          name: body
+          schema:
+            $ref: '#/definitions/Line Update'
+          x-examples:
+            application/json:
+              productid: '40001'
+              startdate: '2018-11-01'
+              enddate: '2018-11-30'
+              ratetype: CPM
+              quantity: 5000000
+              reservedexpirydate: string
+              targeting: string
+              pmp: string
+              ext:
+                dow_mask: 127
+                zipcodes:
+                  - '10001'
+                  - '10002'
+                orientations:
+                  - Portrait
+                slot_duration: 15
+                daypart_starttime: '1130'
+                daypart_endtime: '1530'
+                displayframes:
+                  - MN-04-135464-L
+                  - MN-11-120309-R
+    parameters:
+      - name: account_id
+        in: path
+        type: string
+        required: true
+basePath: /
+definitions:
+  Organization:
+    type: object
+    properties:
+      id:
+        type: string
+      address:
+        $ref: '#/definitions/Address'
+      contacts:
+        type: array
+        items:
+          $ref: '#/definitions/Contact'
+      disapprovalreason:
+        type: string
+        maxLength: 255
+      fax:
+        type: string
+        maxLength: 20
+      cat:
+        type: string
+        enum:
+          - IAB1
+          - IAB1-1
+          - IAB2
+          - IAB12-6
+      name:
+        type: string
+        maxLength: 128
+      phone:
+        type: string
+        maxLength: 20
+      status:
+        type: string
+        enum:
+          - Pending
+          - Approved
+          - ' Disapproved'
+          - Limited
+      url:
+        type: string
+        maxLength: 1024
+      ext:
+        type: string
+      client:
+        $ref: '#/definitions/user'
+      web_hook_services:
+        type: integer
+        format: int32
+    required:
+      - id
+      - name
+  Organization New:
+    type: object
+    properties:
+      address:
+        $ref: '#/definitions/Address'
+      contacts:
+        type: array
+        items:
+          $ref: '#/definitions/Contact'
+      disapprovalreason:
+        type: string
+        maxLength: 255
+      fax:
+        type: string
+        maxLength: 20
+      cat:
+        type: string
+        enum:
+          - IAB1
+          - IAB1-1
+          - IAB2
+          - IAB12-6
+      name:
+        type: string
+        maxLength: 128
+      phone:
+        type: string
+        maxLength: 20
+      status:
+        type: string
+        enum:
+          - Pending
+          - Approved
+          - ' Disapproved'
+          - Limited
+      url:
+        type: string
+        maxLength: 1024
+      ext:
+        type: string
+    required:
+      - name
+  Organization Update:
+    type: object
+    properties:
+      address:
+        $ref: '#/definitions/Address'
+      contacts:
+        type: array
+        items:
+          $ref: '#/definitions/Contact'
+      disapprovalreason:
+        type: string
+        maxLength: 255
+      fax:
+        type: string
+        maxLength: 20
+      cat:
+        type: string
+        enum:
+          - IAB1
+          - IAB1-1
+          - IAB2
+          - IAB12-6
+      name:
+        type: string
+        maxLength: 128
+      phone:
+        type: string
+        maxLength: 20
+      status:
+        type: string
+        enum:
+          - Pending
+          - Approved
+          - ' Disapproved'
+          - Limited
+      url:
+        type: string
+        maxLength: 1024
+      ext:
+        type: string
+  Address:
+    type: object
+    properties:
+      city:
+        type: string
+        maxLength: 255
+      country:
+        type: string
+        maxLength: 255
+      addressline1:
+        type: string
+        maxLength: 255
+      addressline2:
+        type: string
+        maxLength: 255
+      postalcode:
+        type: string
+        maxLength: 15
+      state:
+        type: string
+        maxLength: 36
+    required:
+      - city
+      - country
+      - addressline1
+  Contact:
+    type: object
+    properties:
+      address:
+        $ref: '#/definitions/Address'
+      email:
+        type: string
+        maxLength: 255
+      honorific:
+        type: string
+        maxLength: 20
+      fax:
+        type: string
+        maxLength: 20
+      firstname:
+        type: string
+        maxLength: 20
+      lastname:
+        type: string
+        maxLength: 20
+      phone:
+        type: string
+        maxLength: 20
+      title:
+        type: string
+        maxLength: 30
+      type:
+        type: string
+        enum:
+          - Billing
+          - Buyer
+          - Creative
+          - Sales
+    required:
+      - firstname
+      - lastname
+  Account:
+    type: object
+    properties:
+      id:
+        type: string
+        maxLength: 36
+      advertiserid:
+        type: string
+        maxLength: 36
+      buyerid:
+        type: string
+        maxLength: 36
+      name:
+        type: string
+        maxLength: 255
+      ext:
+        type: string
+    required:
+      - id
+      - advertiserid
+      - buyerid
+      - name
+  Account New:
+    type: object
+    description: OpenDirect.Account
+    properties:
+      advertiserid:
+        type: string
+        maxLength: 36
+      buyerid:
+        type: string
+        maxLength: 36
+      name:
+        type: string
+        maxLength: 255
+      ext:
+        type: string
+    required:
+      - advertiserid
+      - buyerid
+      - name
+  Account Update:
+    type: object
+    description: OpenDirect.Account
+    properties:
+      advertiserid:
+        type: string
+        maxLength: 36
+      buyerid:
+        type: string
+        maxLength: 36
+      name:
+        type: string
+        maxLength: 255
+      ext:
+        type: string
+  Order:
+    type: object
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+        maxLength: 100
+      accountid:
+        type: string
+      publisherid:
+        type: string
+      brand:
+        type: string
+        maxLength: 25
+      currency:
+        type: string
+        enum:
+          - USD
+      budget:
+        type: number
+      orderstatus:
+        type: string
+        enum:
+          - PENDING
+          - APPROVED
+          - REJECTED
+      packageonly:
+        type: boolean
+      preferredbillingmethod:
+        type: string
+        enum:
+          - Electronic
+          - Postal
+      startdate:
+        type: string
+      enddate:
+        type: string
+      orderexpirydate:
+        type: string
+      contacts:
+        type: array
+        items:
+          $ref: '#/definitions/Contact'
+      ext:
+        $ref: '#/definitions/ext_Order'
+    required:
+      - id
+      - name
+      - accountid
+  Order New:
+    type: object
+    properties:
+      name:
+        type: string
+        maxLength: 100
+      publisherid:
+        type: string
+      brand:
+        type: string
+        maxLength: 25
+      cat:
+        type: string
+        enum:
+          - IAB1
+          - IAB1-1
+          - IAB12-6
+      currency:
+        type: string
+        enum:
+          - USD
+      budget:
+        type: number
+      orderstatus:
+        type: string
+        enum:
+          - PENDING
+          - APPROVED
+          - REJECTED
+      packageonly:
+        type: boolean
+      preferredbillingmethod:
+        type: string
+        enum:
+          - Electronic
+          - Postal
+      startdate:
+        type: string
+      enddate:
+        type: string
+      orderexpirydate:
+        type: string
+      contacts:
+        type: array
+        items:
+          $ref: '#/definitions/Contact'
+      ext:
+        $ref: '#/definitions/ext_Order'
+    required:
+      - name
+  Order Update:
+    type: object
+    properties:
+      name:
+        type: string
+        maxLength: 100
+      publisherid:
+        type: string
+      brand:
+        type: string
+        maxLength: 25
+      cat:
+        type: string
+        enum:
+          - IAB1
+          - IAB1-1
+          - IAB12-6
+      currency:
+        type: string
+        enum:
+          - USD
+      budget:
+        type: number
+      orderstatus:
+        type: string
+        enum:
+          - PENDING
+          - APPROVED
+          - REJECTED
+      packageonly:
+        type: boolean
+      preferredbillingmethod:
+        type: string
+        enum:
+          - Electronic
+          - Postal
+      startdate:
+        type: string
+      enddate:
+        type: string
+      orderexpirydate:
+        type: string
+      contacts:
+        type: array
+        items:
+          $ref: '#/definitions/Contact'
+      ext:
+        $ref: '#/definitions/ext_Order'
+  Product:
+    type: object
+    description: |
+      Products represent the various media types that are offered by Intersection to Agencies.
+
+      Examples of Intersection's products include;
+      - LinkNYC 
+      - Chicago IxNtouch
+      - Minneapolis Digital Rail 
+    properties:
+      id:
+        type: string
+      publisherid:
+        type: string
+      name:
+        type: string
+      description:
+        type: string
+      activedate:
+        type: string
+      allownocreative:
+        type: boolean
+      currency:
+        type: string
+        enum:
+          - USD
+      baseprice:
+        type: number
+      deliverytype:
+        type: string
+        enum:
+          - Exclusive
+          - Guaranteed
+      estdailyavails:
+        type: string
+      domain:
+        type: string
+      icon:
+        type: string
+      languages:
+        type: array
+        items:
+          type: string
+      leadtime:
+        type: integer
+      minspend:
+        type: number
+      minflight:
+        type: integer
+      maxflight:
+        type: integer
+      producttags:
+        type: array
+        items:
+          type: string
+      ratetype:
+        type: string
+        enum:
+          - CPM
+      adunit:
+        $ref: '#/definitions/AdUnit'
+      alladunits:
+        type: integer
+      retirementaate:
+        type: string
+      tz:
+        type: string
+        enum:
+          - EST
+      url:
+        type: string
+      regs:
+        type: string
+      device:
+        type: string
+      geo:
+        type: string
+      data:
+        type: string
+      source:
+        type: string
+      pmp:
+        type: string
+      ext:
+        $ref: '#/definitions/ext_Product'
+    required:
+      - id
+      - publisherid
+      - name
+      - currency
+      - baseprice
+      - ratetype
+      - adunit
+  AdUnit:
+    type: object
+    properties:
+      id:
+        type: string
+        maxLength: 36
+      name:
+        type: string
+        maxLength: 255
+      spec:
+        type: string
+      ext:
+        $ref: '#/definitions/ext_AdUnit'
+    required:
+      - id
+  Line:
+    type: object
+    description: |-
+      **frequencycount**, **frequencyinterval** from the OpenDirect Spec are not supported. This information can be found in ext_Product. 
+
+      **comment** is not supported at this time.
+    properties:
+      id:
+        type: string
+        maxLength: 36
+      name:
+        type: string
+        maxLength: 200
+      orderid:
+        type: string
+        maxLength: 36
+      productid:
+        type: string
+        maxLength: 36
+      bookingstatus:
+        type: string
+        enum:
+          - Draft
+          - PendingReservation
+          - Reserved
+          - PendingBooking
+          - Booked
+          - InFlight
+          - Finished
+          - Stopped
+          - Canceled
+          - Pause
+          - Expired
+          - Declined
+          - ChangePending
+      statechangereason:
+        type: string
+      startdate:
+        type: string
+      enddate:
+        type: string
+      ratetype:
+        type: string
+        enum:
+          - CPM
+      rate:
+        type: number
+      quantity:
+        type: integer
+      cost:
+        type: number
+      comment:
+        type: string
+        maxLength: 255
+      reservedexpirydate:
+        type: string
+      targeting:
+        type: string
+      pmp:
+        type: string
+      ext:
+        $ref: '#/definitions/ext_Line'
+    required:
+      - name
+      - orderid
+      - productid
+      - bookingstatus
+      - startdate
+      - enddate
+      - ratetype
+      - rate
+      - quantity
+      - cost
+  Line New:
+    type: object
+    description: |-
+      **frequencycount**, **frequencyinterval** from the OpenDirect Spec are not supported. This information can be found in ext_Product. 
+
+      **comment** is not supported at this time.OpenDirect.Line
+
+      "frequencycount": NOT SUPPORTED
+      "frequencyinterval": NOT SUPPORTED
+    properties:
+      name:
+        type: string
+        maxLength: 200
+      productid:
+        type: string
+        maxLength: 36
+      bookingstatus:
+        type: string
+        enum:
+          - Draft
+          - PendingReservation
+          - Reserved
+          - PendingBooking
+          - Booked
+          - InFlight
+          - Finished
+          - Stopped
+          - Canceled
+          - Pause
+          - Expired
+          - Declined
+          - ChangePending
+      statechangereason:
+        type: string
+      startdate:
+        type: string
+      enddate:
+        type: string
+      ratetype:
+        type: string
+        enum:
+          - CPM
+      rate:
+        type: number
+      quantity:
+        type: integer
+      cost:
+        type: number
+      comment:
+        type: string
+        maxLength: 255
+      frequencycount:
+        type: integer
+      frequencyinterval:
+        type: string
+        enum:
+          - Day
+          - Month
+          - Week
+          - Hour
+          - LineDuration
+      targeting:
+        type: string
+      pmp:
+        type: string
+      ext:
+        $ref: '#/definitions/ext_Line'
+    required:
+      - name
+      - productid
+      - bookingstatus
+      - startdate
+      - enddate
+      - ratetype
+      - rate
+      - quantity
+      - cost
+  Line Update:
+    type: object
+    description: |
+      **frequencycount**, **frequencyinterval** from the OpenDirect Spec are not supported. This information can be found in ext_Product. 
+
+      **comment** is not supported at this time.OpenDirect.Line
+    properties:
+      name:
+        type: string
+        maxLength: 200
+      productid:
+        type: string
+        maxLength: 36
+      bookingstatus:
+        type: string
+        enum:
+          - Draft
+          - PendingReservation
+          - Reserved
+          - PendingBooking
+          - Booked
+          - InFlight
+          - Finished
+          - Stopped
+          - Canceled
+          - Pause
+          - Expired
+          - Declined
+          - ChangePending
+      statechangereason:
+        type: string
+      startdate:
+        type: string
+      enddate:
+        type: string
+      ratetype:
+        type: string
+        enum:
+          - CPM
+      rate:
+        type: number
+      quantity:
+        type: integer
+      cost:
+        type: number
+      comment:
+        type: string
+        maxLength: 255
+      frequencycount:
+        type: integer
+      frequencyinterval:
+        type: string
+        enum:
+          - Day
+          - Month
+          - Week
+          - Hour
+          - LineDuration
+      reservedexpirydate:
+        type: string
+        description: string (date-time)
+      targeting:
+        type: string
+      pmp:
+        type: string
+      ext:
+        $ref: '#/definitions/ext_Line'
+  Creative:
+    type: object
+    description: |-
+      Creatives are associated with an account and can can be associated with an Assignment. Creatives and Assignments can both have separate approvals. 
+
+      creativeasset_url: The creative's publicly accessible URL, used to downloaded and store the creative locally. The system will not track updates to the hosted creative.
+    properties:
+      id:
+        type: string
+        maxLength: 36
+      accountid:
+        type: string
+        maxLength: 36
+      name:
+        type: string
+        maxLength: 255
+      creativeasset:
+        type: string
+      creativeapprovals:
+        type: array
+        enum:
+          - PENDING
+          - APPROVED
+          - REJECTED
+        items:
+          type: string
+      clickurl:
+        type: string
+      ext:
+        $ref: '#/definitions/ext_Creative'
+    required:
+      - accountid
+      - creativeasset
+      - creativeapprovals
+  Creative New:
+    type: object
+    description: |-
+      Creatives are associated with an account and can can be associated with an Assignment. Creatives and Assignments can both have separate approvals. 
+
+      creativeasset_url: The creative's publicly accessible URL, used to downloaded and store the creative locally. The system will not track updates to the hosted creative.
+    properties:
+      name:
+        type: string
+        maxLength: 255
+      ext:
+        $ref: '#/definitions/ext_Creative'
+  Creative Update:
+    type: object
+    description: |-
+      Creatives are associated with an account and can can be associated with an Assignment. Creatives and Assignments can both have separate approvals. 
+
+      creativeasset_url: The creative's publicly accessible URL, used to downloaded and store the creative locally. The system will not track updates to the hosted creative.
+    properties:
+      name:
+        type: string
+        maxLength: 255
+      creativeasset:
+        type: string
+      creativeapprovals:
+        type: array
+        enum:
+          - PENDING
+          - APPROVED
+          - REJECTED
+        items:
+          type: string
+      ext:
+        $ref: '#/definitions/ext_Creative'
+  Placement:
+    type: object
+    description: '**Spec** not supported based on Open Direct. The technical specifications for the Ad Unit are used.'
+    properties:
+      id:
+        type: string
+      lineid:
+        type: string
+      adunitid:
+        type: string
+      spec:
+        type: string
+      ext:
+        $ref: '#/definitions/ext_Placement'
+    required:
+      - lineid
+      - adunitid
+  Placement New:
+    type: object
+    properties:
+      adunitid:
+        type: string
+      spec:
+        type: string
+      ext:
+        $ref: '#/definitions/ext_Placement'
+    required:
+      - adunitid
+    description: '**Spec** not supported based on Open Direct. The technical specifications for the Ad Unit are used.'
+  Placement Update:
+    type: object
+    description: |
+      **Spec** not supported based on Open Direct. The technical specifications for the Ad Unit are used.
+    properties:
+      adunitid:
+        type: string
+      spec:
+        type: string
+      ext:
+        $ref: '#/definitions/ext_Placement'
+  Assignment:
+    type: object
+    description: '**Weight** from the OpenDirect Spec is not supported.'
+    properties:
+      id:
+        type: string
+        maxLength: 36
+      creative:
+        type: string
+        maxLength: 36
+      placementid:
+        type: string
+        maxLength: 36
+      status:
+        type: string
+        enum:
+          - Active
+          - Inactive
+          - Rejected
+          - PendingApproval
+      weight:
+        type: integer
+      ext:
+        $ref: '#/definitions/ext_Assignment'
+    required:
+      - creative
+      - placementid
+  Assignment New:
+    type: object
+    description: |
+      **Weight** from the OpenDirect Spec is not supported.
+    properties:
+      creative:
+        type: string
+        maxLength: 36
+      status:
+        type: string
+        enum:
+          - Active
+          - Inactive
+          - Rejected
+          - PendingApproval
+      weight:
+        type: integer
+      ext:
+        $ref: '#/definitions/ext_Assignment'
+    required:
+      - creative
+  Assignment Update:
+    type: object
+    properties:
+      creative:
+        type: string
+        maxLength: 36
+      status:
+        type: string
+        enum:
+          - Active
+          - Inactive
+          - Rejected
+          - PendingApproval
+      weight:
+        type: integer
+      ext:
+        $ref: '#/definitions/ext_Assignment'
+    description: '**Weight** from the OpenDirect Spec is not supported.'
+  display-frame:
+    title: Display Frame
+    description: |+
+      DisplayFrame is an Intersection defined entity. It refers to each possible frame or screen on a physical unit. DisplayFrame contains location & size information.
+
+      DisplayFrames can be targeted on a Line (ext_Line)
+
+    type: object
+    properties:
+      id:
+        type: string
+      alt_displayframe_id:
+        type: string
+      name:
+        type: string
+      address:
+        type: string
+      orientation:
+        type: string
+        enum:
+          - portrait
+          - landscape
+      resolution_x:
+        type: integer
+      resolution_y:
+        type: integer
+      latitude:
+        type: number
+      longitude:
+        type: number
+      intercardinal_direction:
+        type: string
+      alt_du_id:
+        type: integer
+      ixn_display_id:
+        type: string
+      default_slot_duration:
+        type: string
+      impressions_per_play:
+        type: number
+      zipcode:
+        type: string
+      ixn_site_id:
+        type: string
+      product_ids:
+        type: array
+        items:
+          type: string
+      height_agl_meters:
+        type: number
+        description: Height above ground
+      measurement:
+        type: array
+        items:
+          $ref: '#/definitions/MeasurementEntry'
+  ext_Line:
+    type: object
+    description: 'Ext_line specifies targeting criteria on a Line '
+    properties:
+      dow_mask:
+        type: integer
+      zipcodes:
+        type: array
+        items:
+          type: string
+      orientations:
+        type: array
+        items:
+          type: string
+      slot_duration:
+        type: integer
+      daypart_starttime:
+        type: string
+      daypart_endtime:
+        type: string
+      displayframes:
+        type: array
+        items:
+          type: string
+      pub_alt_line_id:
+        type: string
+      pub_alt_order_id:
+        type: string
+      buyer_line_id:
+        type: string
+  ext_Assignment:
+    type: object
+    properties:
+      statechangereason:
+        type: string
+      pub_alt_assignment_id:
+        type: string
+      buyer_assignment_id:
+        type: string
+  ext_AdPlanEntry:
+    type: object
+    properties:
+      displayframe_id:
+        type: string
+      date:
+        type: string
+      hour:
+        type: integer
+      plays:
+        type: integer
+      impressions:
+        type: integer
+  ext_AdPlan:
+    type: array
+    items:
+      $ref: '#/definitions/ext_AdPlanEntry'
+  MeasurementEntry:
+    type: object
+    title: Measurement Entry
+    properties:
+      displayframe:
+        type: string
+      startdate:
+        type: string
+      endate:
+        type: string
+      source:
+        type: string
+      audience_per_hour:
+        type: number
+      impressions_per_play:
+        type: number
+    required:
+      - displayframe
+  ext_Creative:
+    type: object
+    properties:
+      creativeasset_url:
+        type: string
+      pub_alt_creative_id:
+        type: string
+      buyer_creative_id:
+        type: string
+  display-frame-put:
+    title: Display Frame PUT
+    description: |+
+
+    type: object
+    properties:
+      alt_displayframe_id:
+        type: string
+      name:
+        type: string
+      address:
+        type: string
+      orientation:
+        type: string
+      resolution_x:
+        type: integer
+      resolution_y:
+        type: integer
+      latitude:
+        type: number
+      longitude:
+        type: number
+      intercardinal_direction:
+        type: string
+      alt_du_id:
+        type: integer
+      ixn_display_id:
+        type: string
+      default_slot_duration:
+        type: string
+      impressions_per_play:
+        type: number
+      zipcode:
+        type: string
+      ixn_site_id:
+        type: string
+      product_ids:
+        type: array
+        items:
+          type: string
+      height_agl_meters:
+        type: number
+        description: Height above ground level in meters
+      measurement:
+        type: array
+        items:
+          $ref: '#/definitions/MeasurementEntry'
+  ext_CreativeSpecSummary:
+    type: object
+    properties:
+      widthpixels:
+        type: integer
+      heightpixels:
+        type: integer
+      creativetype:
+        type: string
+        enum:
+          - Image
+          - Video
+          - Unspecified
+      maxfilesizebytes:
+        type: integer
+      mimetype:
+        type: array
+        items:
+          type: string
+      framespersecond:
+        type: integer
+  ext_Product:
+    type: object
+    properties:
+      assignment_leadtime:
+        type: integer
+      slot_duration:
+        type: number
+      spots:
+        type: string
+      spot_length:
+        type: string
+      size:
+        type: string
+  ext_AdUnit:
+    type: object
+    title: ext_AdUnit
+    properties:
+      spec_summary:
+        $ref: '#/definitions/ext_CreativeSpecSummary'
+  ext_Order:
+    title: ext_Order
+    type: object
+    properties:
+      pub_alt_order_id:
+        type: string
+      buyer_order_id:
+        type: string
+  ext_Placement:
+    type: object
+    properties:
+      pub_alt_placement_id:
+        type: string
+      buyer_placement_id:
+        type: string
+  user:
+    type: object
+    properties:
+      username:
+        type: string
+      firstname:
+        type: string
+      lastname:
+        type: string
+      emailaddress:
+        type: string
+      company:
+        type: string
+    required:
+      - username
+  LineAdPlan:
+    type: object
+    properties:
+      line_id:
+        type: string
+      reserved_adplan:
+        type: string
+      booked_adplan:
+        type: string
+    description: Store Line AdPlan
+  WebHookService:
+    type: object
+    properties:
+      id:
+        type: integer
+      name:
+        type: string
+    description: Webhook services
+securityDefinitions:
+  OAuth:
+    type: oauth2
+    flow: application
+    tokenUrl: 'https://accounts.google.com/o/oauth2/token'
+    description: Intersection OAuth implementation
+  basicAuth:
+    type: basic
+tags:
+  - name: Organizations
+  - name: Accounts
+  - name: AdUnits
+  - name: Products
+  - name: DisplayFrames
+  - name: Orders
+  - name: Lines
+  - name: Inventory Availability
+  - name: Placements
+  - name: Creatives
+  - name: Assignments
+consumes:
+  - application/json
+schemes:
+  - https
+produces:
+  - application/json
+security:
+  - OAuth: []
+host: oms.qa.linksvc.com
